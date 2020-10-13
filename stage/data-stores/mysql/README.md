@@ -1,4 +1,4 @@
-# Basic Terraform Framework
+# MySQL on RDS example
 
 ## Pre-requisites
 
@@ -16,4 +16,18 @@ export AWS_ACCESS_KEY_ID=(your access key id)
 export AWS_SECRET_ACCESS_KEY=(your secret access key)
 ```
 
---Start From global/s3
+Open `main.tf`, uncomment the `backend` configuration, and fill in the name of your S3 bucket, DynamoDB table, and
+the path to use for the Terraform state file.
+
+Deploy the code:
+
+```
+terraform init
+terraform apply
+```
+
+Clean up when you're done:
+
+```
+terraform destroy
+```
